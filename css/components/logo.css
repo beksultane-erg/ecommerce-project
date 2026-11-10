@@ -1,0 +1,20 @@
+/* Логотип */
+.logo {
+  flex-shrink: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.logo__img {
+  height: 46px;
+  width: auto;
+  max-width: none;
+}
+
+/* На планшете и телефоне — только квадратный знак */
+@media (max-width: 1024px) {
+  .logo {
+    width: 46px;
+    border-radius: 12px;
+  }
+}

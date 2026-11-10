@@ -1,0 +1,15 @@
+/* Точка входа: подключает все стили по порядку */
+
+/* База */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/global.css");
+
+/* Компоненты */
+@import url("components/header.css");
+@import url("components/burger.css");
+@import url("components/logo.css");
+@import url("components/catalog-button.css");
+@import url("components/search.css");
+@import url("components/header-actions.css");
+@import url("components/drawer.css");

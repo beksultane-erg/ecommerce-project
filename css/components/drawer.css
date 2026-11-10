@@ -1,0 +1,144 @@
+/* Боковое меню и затемнение */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s, visibility .25s;
+  z-index: var(--z-overlay);
+}
+
+.overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(360px, 88vw);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: var(--color-white);
+  color: var(--color-text);
+  transform: translateX(-100%);
+  transition: transform var(--transition-base);
+  z-index: var(--z-drawer);
+}
+
+.drawer.is-open { transform: translateX(0); }
+
+/* Шапка меню */
+.drawer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.drawer__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.drawer__close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.drawer__close:hover { background: rgba(255, 255, 255, .1); }
+
+/* Блок входа */
+.drawer__login {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 20px 8px;
+  padding: 14px 16px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+.drawer__login b {
+  display: block;
+  font-size: 15px;
+}
+
+.drawer__login small {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+/* Разделы со ссылками */
+.drawer__section {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.drawer__section:last-of-type { border-bottom: none; }
+
+.drawer__caption {
+  padding: 4px 20px 8px;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.drawer__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .15s;
+}
+
+.drawer__link:hover { background: var(--color-surface-hover); }
+
+.drawer__link svg {
+  flex-shrink: 0;
+  color: var(--color-brand);
+}
+
+.drawer__badge {
+  margin-left: auto;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-accent);
+  border-radius: 10px;
+}
+
+/* Подвал меню */
+.drawer__footer {
+  margin-top: auto;
+  padding: 20px;
+  background: var(--color-surface);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.drawer__phone {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.drawer__footer p { color: var(--color-muted); }

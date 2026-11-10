@@ -1,0 +1,36 @@
+/* Дизайн-токены: цвета, размеры, шрифты */
+:root {
+  /* Цвета */
+  --color-dark: #121829;
+  --color-white: #ffffff;
+  --color-brand: #2d4fd6;
+  --color-accent: #EA7A35;
+  --color-accent-hover: #d96a26;
+  --color-text: #121829;
+  --color-muted: #6b7080;
+  --color-placeholder: #9a9aa3;
+  --color-surface: #f3f4f7;
+  --color-surface-hover: #f5f6f9;
+  --color-border: #eceef2;
+  --color-overlay: rgba(10, 14, 26, .55);
+  --color-hover-on-dark: rgba(255, 255, 255, .08);
+
+  /* Шрифт */
+  --font-main: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Скругления */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+
+  /* Размеры */
+  --container-width: 1440px;
+  --header-control-height: 48px;
+
+  /* Слои */
+  --z-overlay: 90;
+  --z-drawer: 100;
+
+  /* Анимации */
+  --transition-fast: .2s;
+  --transition-base: .3s ease;
+}

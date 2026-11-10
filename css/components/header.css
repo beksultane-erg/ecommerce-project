@@ -1,0 +1,22 @@
+/* Шапка сайта: контейнер и раскладка */
+.header {
+  background: var(--color-dark);
+  padding: 12px 24px;
+}
+
+.header__inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .header__inner { gap: 16px; }
+}
+
+@media (max-width: 640px) {
+  .header { padding: 10px 12px; }
+  .header__inner { flex-wrap: wrap; gap: 12px; }
+}

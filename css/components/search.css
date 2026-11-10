@@ -1,0 +1,52 @@
+/* Поиск */
+.search {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: stretch;
+  height: var(--header-control-height);
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.search__icon {
+  display: grid;
+  place-items: center;
+  padding: 0 12px 0 16px;
+  color: var(--color-text);
+}
+
+.search__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search__input::placeholder { color: var(--color-placeholder); }
+
+.search__btn {
+  flex-shrink: 0;
+  padding: 0 28px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.search__btn:hover { background: var(--color-accent-hover); }
+
+@media (max-width: 640px) {
+  .search {
+    order: 10;
+    flex-basis: 100%;
+    height: 44px;
+  }
+  .search__btn { padding: 0 18px; }
+}
